@@ -15,7 +15,7 @@ public class Empleado : Persona
         }
     }
 
-    public Empleado (
+        public Empleado (
             string nombre,
             string documento,
             string correo,
@@ -23,10 +23,9 @@ public class Empleado : Persona
             double sueldo,
             string cargo 
         )
-        :base(nombre, documento, correo, edad);
+        :base(nombre, documento, correo, edad)
         {
             this.sueldo = sueldo;
             this.Cargo = cargo;
         }
-
 }
