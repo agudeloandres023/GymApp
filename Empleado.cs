@@ -1,7 +1,7 @@
 public class Empleado : Persona 
 {
     private double sueldo;
-    public string Cargo;
+    public string Cargo = "";
     public double Sueldo
     {
         get {return sueldo;}
@@ -28,4 +28,25 @@ public class Empleado : Persona
             this.sueldo = sueldo;
             this.Cargo = cargo;
         }
+
+        public Empleado (
+            string nombre,
+            string documento,
+            double sueldo 
+        )
+        :base(nombre, documento)
+        {
+            this.sueldo = sueldo;
+        }
+
+    public override void MostrarInfo()
+    {
+        base.MostrarInfo();
+        Console.WriteLine("Cargo: " + Cargo);
+        Console.WriteLine("Sueldo: $" + Sueldo.ToString("NO"));
+    }
+
+    public void CalcularSueldo(string tipo){
+        Console.WriteLine(this.Sueldo);
+    }
 }
