@@ -32,9 +32,11 @@ public class Empleado : Persona
         public Empleado (
             string nombre,
             string documento,
+            string correo,
+            int edad,
             double sueldo 
         )
-        :base(nombre, documento)
+        :base(nombre, documento, correo, edad)
         {
             this.sueldo = sueldo;
         }
@@ -48,5 +50,9 @@ public class Empleado : Persona
 
     public void CalcularSueldo(string tipo){
         Console.WriteLine(this.Sueldo);
+    }
+    
+        public void CalcularSueldo(double descuento){
+        Console.WriteLine(this.sueldo * descuento);
     }
 }
